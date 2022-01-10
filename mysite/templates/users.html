@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<script src="index.js"></script>
+
+        <h3>Users from the "calling company"</h3>
+	{% for user in user_names %}
+	{{ user }} <br>
+	{% endfor %}
+	<br>
+	<h3>user.request</h3>
+	{{ logged_in }}
+	<br>
+	<h3>company id</h3>
+	{{ company }}
+	<br>
+	<br>
+	<h3> Manager List "is_manager"</h3>
+	{{ manager_list }}
+
+	<h3> _do_not_have_manager_ <h3>
+			{{ herd_cats }}
+	
+
+  </body>
+</html>
