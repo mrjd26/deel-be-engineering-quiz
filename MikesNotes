@@ -1,0 +1,63 @@
+
+This task should take about 1-3 hours of your time. (Yes, for what I got to it did)
+
+What app did you use to font color the README.md??? 
+I just opened it in Google docs, libreoffice, vim, linux notes, gedit, github markdown editor - I was trying to put my notes in color, surprisingly hard to do!
+### Requirements
+- Docker  (I've never used Docker before... The container-ization of the Django project, it was easy to install, not sure what all it does)
+
+### Set-up Instructions
+### Data & Models
+
+To add some data, you can use `create_user`.
+
+Thanks - I hadn't used Python/Django in 5 years - first struggle was the render method - adding the BASE_DIR to the /templates in settings.py - took me 30 minutes to figure out.
+
+after that I kind of remembered the templating language - just remembering queryset and models how that works and putting some data in with the manage.py shell and remembering the Objects.all() and filter() django-y method stuff
+
+You will likely need to add more data to the DB to properly implement the requirements for the tasks below. Creating a script would *probably* be useful. :wink:
+
+Yeah, no
+
+
+### Tasks
+1) Make sure that for the `/users` endpoint, that only users for the calling user's company are shown.
+
+I made a /users endpoint  -  I just used the last company I created as an example
+
+2) Update the `reports` action in `UsersViewSet` to return all reports _down_ the reporting tree, recursively.
+
+I saw that class in a file, but did not get to this
+
+3) Add another action, similar to `reports`, called `managers`, that does the inverse of `reports`. It should return all users _up_ the reporting tree from the designated user.
+
+same as 2
+
+4) Add a [filter](https://django-filter.readthedocs.io/en/stable/guide/usage.html#the-filter) for the `/users` endpoint that returns only users that have at least 1 person reporting to them (AKA, filter out users who are/are not managers). Name this filter `is_manager`. It should handle both `true`/`false` values.
+
+
+yep, I kind of remember these to filter the queryset db models - i made a 'managers_list'
+
+5) Add another for the `/users` endpoint that returns only users that _do not_ have a manager. Name this filter `has_manager`. It should handle both `true`/`false` values.
+
+yes - I made a list of manager-less employees
+
+6) Add tests. A `mysite/directory/tests/tests.py` file is configured for you. Add tests there. To run the tests, open a second shell and use the `docker-compose exec directory bash` command to enter the running container. Then run the tests with `./manage.py test -v 2`.
+
+did not get to this
+
+### Follow-up Questions
+1) Provide a few bullet points of optimizations or improvements you would make if given more time.
+2) Any cool feature ideas that you could add as well with minimal effort?
+
+Thanks for the code test - I spent 
+
+15-20 minutes reading instructions - installing docker - wondering what docker does - builds ... something image ... something directory @ opt/at something... something I have to sudo everytime i use
+
+30 minutes - reading about settings.py to get my .html file render / routed properly 
+
+an hour - 90 minutes googling / remembering all the Django - y things -> user.request ... create_user ... manage.py shell ... .objects.all() ... .objects.filter()
+templating looks like this {% for user in user_list %} {{user}}very Django-y!! {%endfor%}
+
+
+Good luck!
